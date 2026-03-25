@@ -3,31 +3,21 @@
 import { Linkedin, Award, GraduationCap, Briefcase } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading";
 import AnimateIn from "./ui/AnimateIn";
+import { useTranslation } from "@/i18n/LanguageContext";
 
-const highlights = [
-  {
-    icon: Briefcase,
-    label: "10+ Years in HR & Talent",
-  },
-  {
-    icon: Award,
-    label: "Mercado Libre, PedidosYa, Flux IT",
-  },
-  {
-    icon: GraduationCap,
-    label: "Psychology Degree + Product & Data Certs",
-  },
-];
+const highlightIcons = [Briefcase, Award, GraduationCap];
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 sm:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <SectionHeading
-            badge="About"
-            title="Meet Josefina"
-            subtitle="The person behind the strategy."
+            badge={t.about.badge}
+            title={t.about.title}
+            subtitle={t.about.subtitle}
           />
         </AnimateIn>
 
@@ -44,48 +34,44 @@ export default function About() {
                 className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-purple-600 hover:text-purple-700 transition-colors"
               >
                 <Linkedin size={18} />
-                Connect on LinkedIn
+                {t.about.connectLinkedin}
               </a>
             </AnimateIn>
 
             <AnimateIn className="md:col-span-2" delay={150}>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                I&apos;m a product-oriented People Partner and Talent Advisor with
-                10+ years of experience in high-growth tech environments across
-                LATAM. I&apos;ve built strategic hiring pipelines, developed
-                internal tools, and collaborated cross-functionally with
-                engineering, leadership, and business stakeholders at companies
-                like{" "}
+                {t.about.bio1}{" "}
                 <span className="font-semibold text-gray-900">
                   Mercado Libre
                 </span>
                 ,{" "}
-                <span className="font-semibold text-gray-900">PedidosYa</span>,
-                and{" "}
+                <span className="font-semibold text-gray-900">PedidosYa</span>
+                ,{" "}
+                <span className="font-semibold text-gray-900">QuintoAndar</span>
+                {" "}{t.about.bio1And}{" "}
                 <span className="font-semibold text-gray-900">Flux IT</span>.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                With a background in psychology and certifications in product
-                management, data analytics, and people analytics, I blend human
-                insight with data-driven thinking. I&apos;m passionate about
-                leveraging technology and empathy to design HR solutions that
-                actually scale — and that people genuinely benefit from.
+                {t.about.bio2}
               </p>
 
               <div className="space-y-4">
-                {highlights.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-purple-50 border border-purple-100"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
-                      <item.icon size={20} className="text-purple-600" />
+                {t.about.highlights.map((label, i) => {
+                  const Icon = highlightIcons[i];
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center gap-4 p-4 rounded-xl bg-purple-50 border border-purple-100"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+                        <Icon size={20} className="text-purple-600" />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-700">
+                        {label}
+                      </span>
                     </div>
-                    <span className="text-sm font-semibold text-gray-700">
-                      {item.label}
-                    </span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </AnimateIn>
           </div>

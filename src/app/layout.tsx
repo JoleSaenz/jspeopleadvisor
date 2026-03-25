@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Josefina Saenz | HR & Talent Consulting for Startups & Tech",
+  title: "Deserve | HR & Talent Consulting for Startups & Tech",
   description:
-    "Strategic HR consulting for startups, tech companies, and modern professionals. Career coaching, talent strategy, and team development by Josefina Saenz.",
+    "Strategic HR consulting for startups, tech companies, and modern professionals. Career coaching, talent strategy, and team development by Deserve.",
   keywords: [
     "HR consulting",
     "talent acquisition",
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

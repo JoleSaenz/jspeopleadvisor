@@ -1,15 +1,20 @@
-import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+"use client";
 
-const footerLinks = [
-  { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#process" },
-  { label: "Why Me", href: "#why" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const footerLinks = [
+    { label: t.navbar.services, href: "#services" },
+    { label: t.navbar.howItWorks, href: "#process" },
+    { label: t.navbar.whyMe, href: "#why" },
+    { label: t.navbar.testimonials, href: "#testimonials" },
+    { label: t.navbar.about, href: "#about" },
+    { label: t.footer.contact, href: "#contact" },
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-400 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,21 +22,20 @@ export default function Footer() {
           <div>
             <a href="#" className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-lg">
-                J
+                D
               </div>
               <span className="text-xl font-bold text-white">
-                Josefina<span className="text-purple-400">.</span>
+                Deserve<span className="text-purple-400">.</span>
               </span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs">
-              Strategic HR consulting for startups, tech companies, and modern
-              professionals across LATAM and beyond.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Quick Links
+              {t.footer.quickLinks}
             </h4>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
@@ -49,7 +53,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Get in Touch
+              {t.footer.getInTouch}
             </h4>
             <div className="space-y-3">
               <a
@@ -66,7 +70,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
               >
                 <Linkedin size={16} />
-                LinkedIn Profile
+                {t.footer.linkedinProfile}
                 <ArrowUpRight size={14} />
               </a>
             </div>
@@ -75,11 +79,10 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} Josefina Saenz. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {t.footer.copyright}
           </p>
           <p className="text-xs">
-            Designed with purpose. Built for results.
+            {t.footer.tagline}
           </p>
         </div>
       </div>
