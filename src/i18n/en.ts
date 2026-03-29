@@ -39,17 +39,17 @@ const en = {
       {
         title: "Career Coaching",
         description:
-          "Feeling stuck or ready for the next leap? Together we'll define your goals, sharpen your personal brand, and create an actionable roadmap for your career growth.",
+          "Whether you're job hunting, looking to change roles, or aiming for a leadership position — get the personalized support you need to stand out and move forward with clarity.",
       },
       {
         title: "Interview Preparation",
         description:
-          "Master behavioral and technical interviews with personalized mock sessions, feedback, and proven frameworks used by candidates hired at top-tier companies.",
+          "Stand out in competitive hiring processes. I tailor interview preparation to your target role, company, and audience through realistic mock sessions and actionable feedback — so you can communicate your experience with clarity, confidence, and impact.",
       },
       {
         title: "Career Transition Guidance",
         description:
-          "Moving from one industry to tech? Switching roles? I'll guide you through the transition with clarity, from repositioning your profile to landing your new role.",
+          "Switching roles or industries? I guide you through the transition with a clear strategy — from repositioning your profile to navigating the job market and landing your next opportunity.",
       },
     ],
   },
@@ -72,7 +72,7 @@ const en = {
       {
         title: "Data Analysis & Action Plans",
         description:
-          "Numbers tell a story. I help you interpret people data — from turnover rates to engagement scores — and build strategic action plans that drive real change.",
+          "Numbers tell a story. I help you interpret people data — from turnover rates to engagement scores — and turn insights into strategic action plans that drive real impact.",
         features: [
           "People analytics dashboards",
           "Trend identification",
@@ -82,11 +82,11 @@ const en = {
       {
         title: "Leadership & Team Development",
         description:
-          "High-performing teams need strong leaders. I coach managers and executives 1-on-1 while running targeted workshops that improve communication, leadership, and team collaboration.",
+          "High-performing teams need strong leaders. I coach managers and executives 1:1 to strengthen leadership, communication, and team effectiveness. ",
         features: [
           "Executive & leadership coaching",
           "First-time manager support",
-          "Team workshops & alignment",
+          "Confidential 1:1 support sessions for employees navigating challenging situations"
         ],
       },
       {
@@ -100,19 +100,19 @@ const en = {
         ],
       },
       {
-        title: "Org Design",
+        title: "People Strategy & Organizational Design",
         description:
-          "Structure your organization for scale. I help you define roles, reporting lines, and team topologies that align with your business goals and growth stage.",
+          "Structure your organization for scale. I help you define roles, reporting lines, and team structures that align with your business goals and growth stage.",
         features: [
           "Role architecture & leveling",
           "Team structure mapping",
-          "Scalable org frameworks",
+          "Scalable organizational frameworks",
         ],
       },
       {
-        title: "People Relationship",
+        title: "Networking & Partnerships",
         description:
-          "Landing in a new market? I connect you with the right people — from IT event organizers to key community players — so you can build your brand, grow your network, and establish a real presence from day one.",
+          "Landing in a new market? I connect you with the right people — from key community players to industry leaders — so you can build your brand, grow your network, and establish a strong local presence from day one.",
         features: [
           "Strategic networking & introductions",
           "Local ecosystem mapping",
@@ -125,18 +125,18 @@ const en = {
     badge: "Process",
     title: "How It Works",
     subtitle:
-      "A simple, structured approach to get you from where you are to where you want to be.",
+      "A structured process to help you move forward and land your next opportunity.",
     stepLabel: "Step",
     steps: [
       {
         title: "Book a Discovery Call",
         description:
-          "We start with a free, no-pressure conversation to understand your needs, goals, and where you're at right now.",
+          "We start with a free, no-pressure conversation to understand your needs, goals, context and challenges.",
       },
       {
         title: "Deep-Dive Assessment",
         description:
-          "I analyze your situation — whether it's your career profile, team dynamics, or people processes — to identify what matters most.",
+          "I analyze your situation to identify what matters most. I translate those insights into an action plan.",
       },
       {
         title: "Custom Strategy",
@@ -146,7 +146,7 @@ const en = {
       {
         title: "Execute & Grow",
         description:
-          "We work together to implement the plan, track progress, and iterate. I'm with you every step of the way.",
+          "We work together through focused sessions to implement the plan, track progress, and iterate.",
       },
     ],
   },
@@ -242,6 +242,8 @@ const en = {
     placeholderMessage:
       "What are you working on? What challenges are you facing?",
     submit: "Send Message",
+    sending: "Sending...",
+    errorMessage: "Something went wrong. Please try again or email us directly.",
     scheduleDirectly: "Prefer to schedule directly?",
     bookFreeCall: "Let's Talk",
   },

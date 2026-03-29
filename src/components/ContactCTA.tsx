@@ -1,16 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import { Send, ArrowRight, CheckCircle } from "lucide-react";
+import { Send, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageContext";
 
 export default function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { t } = useTranslation();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          type: formData.get("type"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+    } catch {
+      setError(t.contact.errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -64,6 +90,7 @@ export default function ContactCTA() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     placeholder={t.contact.placeholderName}
                     className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-purple-300/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all"
@@ -79,6 +106,7 @@ export default function ContactCTA() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     placeholder={t.contact.placeholderEmail}
                     className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-purple-300/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all"
@@ -94,6 +122,7 @@ export default function ContactCTA() {
                 </label>
                 <select
                   id="type"
+                  name="type"
                   className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all appearance-none"
                 >
                   <option value="" className="text-gray-900">{t.contact.selectDefault}</option>
@@ -113,17 +142,33 @@ export default function ContactCTA() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   placeholder={t.contact.placeholderMessage}
                   className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-purple-300/60 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all resize-none"
                 />
               </div>
+              {error && (
+                <div className="mb-6 px-4 py-3 rounded-xl bg-red-500/20 border border-red-400/30 text-red-200 text-sm">
+                  {error}
+                </div>
+              )}
               <button
                 type="submit"
-                className="w-full cursor-pointer inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold bg-white text-purple-700 rounded-xl hover:bg-purple-50 transition-all duration-300 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-purple-700"
+                disabled={loading}
+                className="w-full cursor-pointer inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold bg-white text-purple-700 rounded-xl hover:bg-purple-50 transition-all duration-300 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-purple-700 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {t.contact.submit}
-                <Send size={20} />
+                {loading ? (
+                  <>
+                    {t.contact.sending}
+                    <Loader2 size={20} className="animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    {t.contact.submit}
+                    <Send size={20} />
+                  </>
+                )}
               </button>
             </form>
           )}

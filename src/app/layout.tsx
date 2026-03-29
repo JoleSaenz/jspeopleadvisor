@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -31,7 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -244,6 +244,8 @@ const es: Translations = {
     placeholderMessage:
       "¿En qué estás trabajando? ¿Qué desafíos estás enfrentando?",
     submit: "Enviar Mensaje",
+    sending: "Enviando...",
+    errorMessage: "Algo salió mal. Por favor intentá de nuevo o escribinos directamente por email.",
     scheduleDirectly: "¿Preferís agendar directamente?",
     bookFreeCall: "Agendá una llamada gratis de 30 minutos",
   },
