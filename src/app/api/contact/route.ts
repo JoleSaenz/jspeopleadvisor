@@ -1,7 +1,13 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY environment variable is not set");
+  }
+  return new Resend(apiKey);
+}
 
 interface ContactPayload {
   name: string;
@@ -40,6 +46,8 @@ export async function POST(request: Request) {
     }
 
     const serviceType = TYPE_LABELS[type] || type || "Not specified";
+
+    const resend = getResendClient();
 
     await resend.emails.send({
       from: `Deserve Contact <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
