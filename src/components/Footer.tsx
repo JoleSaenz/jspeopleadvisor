@@ -57,11 +57,11 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <a
-                href="mailto:josefina@example.com"
+                href="mailto:hiveforwardsolutions@gmail.com"
                 className="flex items-center gap-2 text-sm hover:text-purple-400 transition-colors"
               >
                 <Mail size={16} />
-                josefina@example.com
+                hiveforwardsolutions@gmail.com
               </a>
               <a
                 href="https://www.linkedin.com/in/josefina-saenz/"

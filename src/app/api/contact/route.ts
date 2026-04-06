@@ -17,10 +17,16 @@ interface ContactPayload {
 }
 
 const TYPE_LABELS: Record<string, string> = {
-  career: "Career Coaching / CV Optimization",
+  cv: "CV Optimization",
+  career: "Career Coaching",
   interview: "Interview Preparation",
-  engagement: "Employee Engagement Survey",
-  team: "Team Coaching & Development",
+  transition: "Career Transition Guidance",
+  engagement: "Engagement & Climate Surveys",
+  analytics: "Data Analysis & Action Plans",
+  leadership: "Leadership & Team Development",
+  talent: "Talent Management & Development",
+  "org-design": "Organizational Design",
+  "people-relation": "People Relationship",
   other: "Other",
 };
 

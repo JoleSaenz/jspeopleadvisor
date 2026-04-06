@@ -126,10 +126,20 @@ export default function ContactCTA() {
                   className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent transition-all appearance-none"
                 >
                   <option value="" className="text-gray-900">{t.contact.selectDefault}</option>
-                  <option value="career" className="text-gray-900">{t.contact.optionCareer}</option>
-                  <option value="interview" className="text-gray-900">{t.contact.optionInterview}</option>
-                  <option value="engagement" className="text-gray-900">{t.contact.optionEngagement}</option>
-                  <option value="team" className="text-gray-900">{t.contact.optionTeam}</option>
+                  <optgroup label={t.contact.groupIndividuals} className="text-gray-900 font-semibold">
+                    <option value="cv" className="text-gray-900">{t.contact.optionCv}</option>
+                    <option value="career" className="text-gray-900">{t.contact.optionCareer}</option>
+                    <option value="interview" className="text-gray-900">{t.contact.optionInterview}</option>
+                    <option value="transition" className="text-gray-900">{t.contact.optionTransition}</option>
+                  </optgroup>
+                  <optgroup label={t.contact.groupCompanies} className="text-gray-900 font-semibold">
+                    <option value="engagement" className="text-gray-900">{t.contact.optionEngagement}</option>
+                    <option value="analytics" className="text-gray-900">{t.contact.optionAnalytics}</option>
+                    <option value="leadership" className="text-gray-900">{t.contact.optionLeadership}</option>
+                    <option value="talent" className="text-gray-900">{t.contact.optionTalent}</option>
+                    <option value="org-design" className="text-gray-900">{t.contact.optionOrgDesign}</option>
+                    <option value="people-relation" className="text-gray-900">{t.contact.optionPeopleRelation}</option>
+                  </optgroup>
                   <option value="other" className="text-gray-900">{t.contact.optionOther}</option>
                 </select>
               </div>
