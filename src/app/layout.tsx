@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Deserve | HR & Talent Consulting for Startups & Tech",
+  title: "HiveForward | HR & Talent Consulting for Startups & Tech",
   description:
-    "Strategic HR consulting for startups, tech companies, and modern professionals. Career coaching, talent strategy, and team development by Deserve.",
+    "Strategic HR consulting for startups, tech companies, and modern professionals. Career coaching, talent strategy, and team development by HiveForward.",
   keywords: [
     "HR consulting",
     "talent acquisition",

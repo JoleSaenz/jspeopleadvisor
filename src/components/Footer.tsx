@@ -22,10 +22,10 @@ export default function Footer() {
           <div>
             <a href="#" className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-lg">
-                D
+                HF
               </div>
               <span className="text-xl font-bold text-white">
-                Deserve<span className="text-purple-400">.</span>
+                HiveForward<span className="text-purple-400">.</span>
               </span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs">

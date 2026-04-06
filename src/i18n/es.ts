@@ -256,7 +256,7 @@ const es: Translations = {
     contact: "Contacto",
     getInTouch: "Ponete en Contacto",
     linkedinProfile: "Perfil de LinkedIn",
-    copyright: "Deserve. Todos los derechos reservados.",
+    copyright: "HiveForward. Todos los derechos reservados.",
     tagline: "Diseñado con propósito. Construido para resultados.",
   },
 };

@@ -23,10 +23,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-lg transition-transform duration-300 group-hover:scale-110">
-              D
+              HF
             </div>
             <span className="text-xl font-bold text-gray-900">
-              Deserve<span className="text-purple-600"></span>
+              HiveForward<span className="text-purple-600"></span>
             </span>
           </a>
 

@@ -50,7 +50,7 @@ export async function POST(request: Request) {
     const resend = getResendClient();
 
     await resend.emails.send({
-      from: `Deserve Contact <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
+      from: `HiveForward Contact <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
       to,
       replyTo: email,
       subject: `New contact from ${name} — ${serviceType}`,
@@ -78,7 +78,7 @@ export async function POST(request: Request) {
           </table>
           <hr style="border: 1px solid #e5e7eb; margin-top: 24px;" />
           <p style="color: #9ca3af; font-size: 12px; margin-top: 12px;">
-            Sent from the Deserve website contact form.
+            Sent from the HiveForward website contact form.
           </p>
         </div>
       `,

@@ -254,7 +254,7 @@ const en = {
     contact: "Contact",
     getInTouch: "Get in Touch",
     linkedinProfile: "LinkedIn Profile",
-    copyright: "Deserve. All rights reserved.",
+    copyright: "HiveForward. All rights reserved.",
     tagline: "Designed with purpose. Built for results.",
   },
 };
