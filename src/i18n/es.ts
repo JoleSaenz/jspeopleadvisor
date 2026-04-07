@@ -246,7 +246,7 @@ const es: Translations = {
     optionLeadership: "Liderazgo y Desarrollo de Equipos",
     optionTalent: "Gestión y Desarrollo de Talento",
     optionOrgDesign: "Diseño Organizacional",
-    optionPeopleRelation: "People Relationship",
+    optionNetworking: "People Relationship",
     optionOther: "Otro",
     labelMessage: "Contame un poco sobre tu situación",
     placeholderMessage:

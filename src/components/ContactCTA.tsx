@@ -138,7 +138,7 @@ export default function ContactCTA() {
                     <option value="leadership" className="text-gray-900">{t.contact.optionLeadership}</option>
                     <option value="talent" className="text-gray-900">{t.contact.optionTalent}</option>
                     <option value="org-design" className="text-gray-900">{t.contact.optionOrgDesign}</option>
-                    <option value="people-relation" className="text-gray-900">{t.contact.optionPeopleRelation}</option>
+                    <option value="networking" className="text-gray-900">{t.contact.optionNetworking}</option>
                   </optgroup>
                   <option value="other" className="text-gray-900">{t.contact.optionOther}</option>
                 </select>
