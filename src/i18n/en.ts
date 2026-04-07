@@ -188,7 +188,7 @@ const en = {
         name: "Martín Delgado",
         role: "CTO, Fintech Startup",
         content:
-          "Josefina helped us build our entire engineering team from scratch. She understood our culture from day one and found candidates who weren't just skilled — they were the perfect fit. Our retention rate speaks for itself.",
+          "Jole helped us build our entire engineering team from scratch. She understood our culture from day one and found candidates who weren't just skilled — they were the perfect fit. Our retention rate speaks for itself.",
       },
       {
         name: "Lucía Fernández",
@@ -206,7 +206,7 @@ const en = {
   },
   about: {
     badge: "About",
-    title: "Meet Josefina",
+    title: "Meet Jole",
     subtitle: "The person behind the strategy.",
     connectLinkedin: "Connect on LinkedIn",
     bio1: "I'm a product-oriented People Partner and Talent Advisor with 10+ years of experience in high-growth tech environments across LATAM. I've built strategic hiring pipelines, developed internal tools, and collaborated cross-functionally with engineering, leadership, and business stakeholders at companies like",

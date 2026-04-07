@@ -190,25 +190,25 @@ const es: Translations = {
         name: "Martín Delgado",
         role: "CTO, Startup Fintech",
         content:
-          "Josefina nos ayudó a armar todo nuestro equipo de ingeniería desde cero. Entendió nuestra cultura desde el día uno y encontró candidatos que no solo eran hábiles — eran el fit perfecto. Nuestra tasa de retención habla por sí sola.",
+          "Jole nos ayudó a armar todo nuestro equipo de ingeniería desde cero. Entendió nuestra cultura desde el día uno y encontró candidatos que no solo eran hábiles — eran el fit perfecto. Nuestra tasa de retención habla por sí sola.",
       },
       {
         name: "Lucía Fernández",
         role: "Senior Software Engineer",
         content:
-          "Estaba estancada en mi carrera y no sabía cómo posicionarme para un rol de liderazgo. Después de solo tres sesiones de coaching con Josefina, tenía un plan claro, un CV pulido y la confianza para ir por ello. Conseguí la promoción en dos meses.",
+          "Estaba estancada en mi carrera y no sabía cómo posicionarme para un rol de liderazgo. Después de solo tres sesiones de coaching con Jole, tenía un plan claro, un CV pulido y la confianza para ir por ello. Conseguí la promoción en dos meses.",
       },
       {
         name: "Santiago Morales",
         role: "Head of People, Empresa SaaS",
         content:
-          "La encuesta de engagement que diseñó Josefina nos dio insights que nos faltaban hace años. Su plan de acción fue práctico y específico — no el consejo genérico que habíamos recibido antes. Nuestros puntajes de satisfacción del equipo subieron un 30% en un trimestre.",
+          "La encuesta de engagement que diseñó Jole nos dio insights que nos faltaban hace años. Su plan de acción fue práctico y específico — no el consejo genérico que habíamos recibido antes. Nuestros puntajes de satisfacción del equipo subieron un 30% en un trimestre.",
       },
     ],
   },
   about: {
     badge: "Sobre Mí",
-    title: "Conocé a Josefina",
+    title: "Conocé a Jole",
     subtitle: "La persona detrás de la estrategia.",
     connectLinkedin: "Conectar en LinkedIn",
     bio1: "Soy una People Partner y Talent Advisor orientada a producto con más de 10 años de experiencia en entornos tech de alto crecimiento en LATAM. Construí pipelines de contratación estratégicos, desarrollé herramientas internas y colaboré de forma transversal con equipos de ingeniería, liderazgo y stakeholders de negocio en empresas como",
