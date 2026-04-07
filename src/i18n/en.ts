@@ -206,7 +206,7 @@ const en = {
   },
   about: {
     badge: "About",
-    title: "Meet Jole",
+    title: "Meet Jole Saenz",
     subtitle: "The person behind the strategy.",
     connectLinkedin: "Connect on LinkedIn",
     bio1: "I'm a product-oriented People Partner and Talent Advisor with 10+ years of experience in high-growth tech environments across LATAM. I've built strategic hiring pipelines, developed internal tools, and collaborated cross-functionally with engineering, leadership, and business stakeholders at companies like",

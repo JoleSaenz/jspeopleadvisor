@@ -208,7 +208,7 @@ const es: Translations = {
   },
   about: {
     badge: "Sobre Mí",
-    title: "Conocé a Jole",
+    title: "Conocé a Jole Saenz",
     subtitle: "La persona detrás de la estrategia.",
     connectLinkedin: "Conectar en LinkedIn",
     bio1: "Soy una People Partner y Talent Advisor orientada a producto con más de 10 años de experiencia en entornos tech de alto crecimiento en LATAM. Construí pipelines de contratación estratégicos, desarrollé herramientas internas y colaboré de forma transversal con equipos de ingeniería, liderazgo y stakeholders de negocio en empresas como",
