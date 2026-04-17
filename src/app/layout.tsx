@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import PasswordGate from "@/components/PasswordGate";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 
@@ -33,7 +34,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <LanguageProvider>
-          {children}
+          <PasswordGate>
+            {children}
+          </PasswordGate>
           <Analytics />
         </LanguageProvider>
       </body>
